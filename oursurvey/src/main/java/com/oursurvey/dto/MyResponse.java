@@ -11,8 +11,6 @@ import lombok.ToString;
 public class MyResponse {
     public static final Integer STATUS_GOOD = 200;             // 정상
     public static final Integer CLIENT_ERROR = 400;            // 클라이언트에러(invalid form ...)
-    public static final Integer INVALID_PARTNER_AUTH = 401;    // 파트너사 로그인 auth 없음
-    public static final Integer LOGIN_NO_SESSION = 402;        // session 없음
     public static final Integer NOT_FOUND = 404;               // 404
     public static final Integer INVALID_TOKEN = 480;           // jwt 토큰 형식이 아님
     public static final Integer INVALID_ACCESSTOKEN = 481;     // jwt access token 에러

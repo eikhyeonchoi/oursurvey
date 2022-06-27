@@ -53,6 +53,9 @@ dependencies {
 	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 	annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
 
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.7.1'
+
 	// https://mvnrepository.com/artifact/org.springframeworkcloud/spring-cloud-starter-aws
 	// implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
 
