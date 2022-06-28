@@ -21,6 +21,7 @@ public class ExceptionAdvice {
             InvalidTokenException.class,
             InvalidAccessTokenException.class,
             InvalidRefreshTokenException.class,
+            CertifiedException.class,
             RuntimeException.class
     })
     public MyResponse exceptionFor400(Exception e) {
@@ -28,6 +29,7 @@ public class ExceptionAdvice {
         if (e instanceof InvalidTokenException) myResponse.setCode(MyResponse.INVALID_TOKEN);
         if (e instanceof InvalidAccessTokenException) myResponse.setCode(MyResponse.INVALID_ACCESSTOKEN);
         if (e instanceof InvalidRefreshTokenException) myResponse.setCode(MyResponse.INVALID_REFRESHTOKEN);
+        if (e instanceof CertifiedException) myResponse.setCode(MyResponse.INVALID_CERTIFIED_CODE);
         return myResponse;
     }
 

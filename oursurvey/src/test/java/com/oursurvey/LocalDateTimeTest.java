@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 public class LocalDateTimeTest {
     @Test
     void test() {
-        LocalDateTime now = LocalDateTime.now();X
+        LocalDateTime now = LocalDateTime.now();
 
         int year = now.getYear();
         int monthValue = now.getMonthValue();

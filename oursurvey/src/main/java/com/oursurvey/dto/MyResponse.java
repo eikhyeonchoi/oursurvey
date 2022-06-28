@@ -17,6 +17,7 @@ public class MyResponse {
     public static final Integer INVALID_REFRESHTOKEN = 482;    // jwt refresh token 에러
     public static final Integer INVALID_ID = 483;              // 아이디 에러
     public static final Integer INVALID_ID_PWD_MATCHING = 484; // ID, PWD 매칭 에러
+    public static final Integer INVALID_CERTIFIED_CODE = 485;  // 인증코드에러
     public static final Integer SERVER_ERROR = 500;            // 서버에러(db 등)
 
     private Integer code = STATUS_GOOD;

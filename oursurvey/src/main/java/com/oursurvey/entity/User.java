@@ -31,12 +31,12 @@ public class User extends CommonDate {
     @Column(name = "pwd", nullable = false)
     private String pwd;
 
-    @Column(name = "gender", columnDefinition = "ENUM", nullable = false)
+    @Column(name = "gender", columnDefinition = "ENUM")
     private Enums gender;
 
-    @Column(name = "age", nullable = false)
+    @Column(name = "age")
     private LocalDate age;
 
-    @Column(name = "tel", nullable = false)
+    @Column(name = "tel")
     private String tel;
 }

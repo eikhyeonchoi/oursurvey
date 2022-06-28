@@ -8,6 +8,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
 
 import javax.mail.internet.MimeMessage;
+import java.util.Random;
 
 @Slf4j
 @Component
@@ -26,5 +27,15 @@ public class MailUtil {
         helper.setSubject(subject);
         helper.setText(content, true);
         mailSender.send(mail);
+    }
+
+    public String generateAuthCode() {
+        String code = "";
+        Random random = new Random();
+        for(int i = 0; i < 6; i++) {
+            code += random.nextInt(9);
+        }
+
+        return code;
     }
 }

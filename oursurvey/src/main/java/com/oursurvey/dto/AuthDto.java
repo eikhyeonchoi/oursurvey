@@ -18,4 +18,30 @@ public class AuthDto {
         @NotBlank
         private String pwd;
     }
+
+    @Getter
+    @ToString
+    @NoArgsConstructor(access = AccessLevel.PROTECTED)
+    @AllArgsConstructor
+    public static class Join {
+        @Email
+        @NotBlank
+        private String email;
+
+        @NotBlank
+        private String pwd;
+    }
+
+    @Getter
+    @ToString
+    @NoArgsConstructor(access = AccessLevel.PROTECTED)
+    @AllArgsConstructor
+    public static class Certified {
+        @Email
+        @NotBlank
+        private String email;
+
+        @NotBlank
+        private String code;
+    }
 }
