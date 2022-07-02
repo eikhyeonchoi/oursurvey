@@ -1,5 +1,6 @@
 package com.oursurvey.repo.user;
 
+import com.oursurvey.dto.repo.user.UserDto;
 import com.oursurvey.entity.User;
 
 import java.util.Optional;

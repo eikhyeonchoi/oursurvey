@@ -31,4 +31,15 @@ public class UserDto {
             this.tel = entity.getTel();
         }
     }
+
+    @Getter
+    @ToString
+    @NoArgsConstructor(access = AccessLevel.PROTECTED)
+    @AllArgsConstructor
+    @Builder
+    public static class Create {
+        private String gradeId;
+        private String email;
+        private String pwd;
+    }
 }

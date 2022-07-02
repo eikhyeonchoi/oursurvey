@@ -37,10 +37,13 @@ public class WebConfig implements WebMvcConfigurer {
                         "/index.html",
                         "/",
                         "/null",
+                        "/api/test/**",
                         "/api/auth/login",
                         "/api/auth/logout",
-                        "/api/auth/signup",
-                        "/api/test/**"
+                        "/api/auth/join",
+                        "/api/auth/take",
+                        "/api/auth/certified",
+                        "/api/auth/refresh"
                 );
     }
 

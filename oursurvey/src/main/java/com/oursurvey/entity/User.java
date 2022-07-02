@@ -1,9 +1,6 @@
 package com.oursurvey.entity;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -39,4 +36,15 @@ public class User extends CommonDate {
 
     @Column(name = "tel")
     private String tel;
+
+    @Builder
+    public User(Long id, Grade grade, String email, String pwd, Enums gender, LocalDate age, String tel) {
+        this.id = id;
+        this.grade = grade;
+        this.email = email;
+        this.pwd = pwd;
+        this.gender = gender;
+        this.age = age;
+        this.tel = tel;
+    }
 }

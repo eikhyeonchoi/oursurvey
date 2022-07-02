@@ -1,9 +1,6 @@
 package com.oursurvey.entity;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -25,4 +22,11 @@ public class Grade extends CommonDate {
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    @Builder
+    public Grade(Long id, Integer pivot, String name) {
+        this.id = id;
+        this.pivot = pivot;
+        this.name = name;
+    }
 }

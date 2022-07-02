@@ -14,8 +14,6 @@ DROP TABLE IF EXISTS `survey`;
 DROP TABLE IF EXISTS `user`;
 DROP TABLE IF EXISTS `grade`;
 
-
-
 CREATE TABLE IF NOT EXISTS `file` (
     `id` int NOT NULL AUTO_INCREMENT,
     `table_pk` bigint NOT NULL,
@@ -178,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `hashtag_survey` (
 
 CREATE TABLE IF NOT EXISTS `reply` (
     `id` bigint NOT NULL AUTO_INCREMENT,
-    `user_id` bigint NOT NULL,
+    `user_id` bigint NULL,
     `survey_id` bigint NOT NULL,
     `created_dt` datetime DEFAULT CURRENT_TIMESTAMP,
     `updated_dt` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
