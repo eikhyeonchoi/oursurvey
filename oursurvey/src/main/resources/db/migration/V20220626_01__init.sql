@@ -93,8 +93,10 @@ CREATE TABLE IF NOT EXISTS `experience` (
 
 CREATE TABLE IF NOT EXISTS `survey` (
     `id` bigint NOT NULL AUTO_INCREMENT,
-    `user_id` bigint NOT NULL,
+    `user_id` bigint,
     `subject` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+    `content` TEXT NOT NULL COLLATE utf8mb4_general_ci,
+    `minute` INT(10) NOT NULL,
     `start_date` datetime NOT NULL,
     `end_date` datetime NOT NULL,
     `open_fl` tinyint NOT NULL,
@@ -119,7 +121,8 @@ CREATE TABLE IF NOT EXISTS `top_survey` (
 CREATE TABLE IF NOT EXISTS `section` (
     `id` bigint NOT NULL AUTO_INCREMENT,
     `survey_id` bigint NOT NULL,
-    `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+    `title` VARCHAR(255) NULL DEFAULT NULL COLLATE utf8mb4_general_ci,
+    `content` VARCHAR(255) NULL DEFAULT NULL COLLATE utf8mb4_general_ci,
     `next_section` bigint NOT NULL DEFAULT '0',
     `created_dt` datetime DEFAULT CURRENT_TIMESTAMP,
     `updated_dt` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
